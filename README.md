@@ -22,3 +22,24 @@ readme_content = """
 # Escribir el contenido en un archivo README.md
 with open("README.md", "w") as readme_file:
     readme_file.write(readme_content)
+
+# Librerías de Logging en Diferentes Lenguajes
+
+Este documento describe y compara dos librerías de logging, una para Python y otra para JavaScript. Se detallan las características típicas de cada librería para facilitar su uso.
+
+| **Característica**                  | **Python** (`logging`)                                                                                       | **JavaScript** (`Winston`)                                                                                                            |
+|-------------------------------------|--------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| **Lenguaje**                        | Python                                                                                                       | JavaScript                                                                                                                            |
+| **Nombre de la librería**           | `logging`                                                                                                    | `winston`                                                                                                                             |
+| **¿Es nativa del lenguaje?**        | Sí                                                                                                           | No                                                                                                                                    |
+| **URL para descargar la librería**  | [https://docs.python.org/3/library/logging.html](https://docs.python.org/3/library/logging.html)             | [https://github.com/winstonjs/winston](https://github.com/winstonjs/winston)                                                         |
+| **Inicialización del objeto logger** | `logger = logging.getLogger(__name__)`                                                                       | ```javascript const winston = require('winston'); const logger = winston.createLogger({}); ```                                         |
+| **Niveles de log disponibles**      | DEBUG, INFO, WARNING, ERROR, CRITICAL                                                                        | error, warn, info, http, verbose, debug, silly                                                                                       |
+| **Método para hacer log**           | `logger.info('Mensaje de prueba')`                                                                           | `logger.log({ level: 'info', message: 'Mensaje de prueba' });`                                                                        |
+| **Tipos de manejadores (pantalla, archivo, etc.)** | `StreamHandler`, `FileHandler`, `SMTPHandler`, `SysLogHandler`                                               | Console (`winston.transports.Console`), File (`winston.transports.File`), HTTP (`winston.transports.Http`)                            |
+| **Opciones de formato**             | `logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')`                                   | ```javascript new winston.format.combine(winston.format.timestamp(), winston.format.simple()) ```                                     |
+
+## Resumen
+
+1. **Python**: `logging` es una librería nativa que ofrece gran flexibilidad con múltiples tipos de manejadores, opciones de formato y soporte para diferentes niveles de logs.
+2. **JavaScript**: `winston` es una librería poderosa que permite configurar transportes versátiles y personalizables para enviar logs a diferentes destinos.
