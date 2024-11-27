@@ -25,8 +25,6 @@ with open("README.md", "w") as readme_file:
 
 # Librerías de Logging en Diferentes Lenguajes
 
-Este documento describe y compara dos librerías de logging, una para Python y otra para JavaScript. Se detallan las características típicas de cada librería para facilitar su uso.
-
 | **Característica**                  | **Python** (`logging`)                                                                                       | **JavaScript** (`Winston`)                                                                                                            |
 |-------------------------------------|--------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
 | **Lenguaje**                        | Python                                                                                                       | JavaScript                                                                                                                            |
@@ -41,5 +39,5 @@ Este documento describe y compara dos librerías de logging, una para Python y o
 
 ## Resumen
 
-1. **Python**: `logging` es una librería nativa que ofrece gran flexibilidad con múltiples tipos de manejadores, opciones de formato y soporte para diferentes niveles de logs.
+1. **Python**: `logging` es una librería nativa que ofrece flexibilidad con múltiples tipos de manejadores, opciones de formato y soporte para diferentes niveles de logs.
 2. **JavaScript**: `winston` es una librería poderosa que permite configurar transportes versátiles y personalizables para enviar logs a diferentes destinos.
